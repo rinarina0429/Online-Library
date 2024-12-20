@@ -20,8 +20,9 @@ import org.hibernate.annotations.ColumnDefault;
 public class Book {
 
     @Id
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long bookId;
 
     @Column(nullable = false)
     private String title;

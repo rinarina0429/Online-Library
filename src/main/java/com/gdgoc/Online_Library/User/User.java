@@ -20,8 +20,9 @@ import org.hibernate.annotations.ColumnDefault;
 public class User {
 
     @Id
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
 
     @Column(nullable = false)
     private String name;
