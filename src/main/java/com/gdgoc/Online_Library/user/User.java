@@ -30,15 +30,19 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Column(unique = true, nullable = false)
+    private String email;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     @ColumnDefault("'USER'")
     private Role role;
 
     @Builder
-    public User(String name, String password, Role role) {
+    public User(String name, String password, String email, Role role) {
         this.name = name;
         this.password = password;
+        this.email = email;
         this.role = role;
     }
 }
