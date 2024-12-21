@@ -1,9 +1,9 @@
 package com.gdgoc.Online_Library.auth;
 
+import com.gdgoc.Online_Library.auth.dto.LoginRequest;
+import com.gdgoc.Online_Library.auth.dto.LoginResponse;
 import com.gdgoc.Online_Library.auth.dto.SignUpRequest;
 import jakarta.validation.Valid;
-import java.util.HashMap;
-import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,10 +25,8 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest loginRequest) {
-        String token = authService.login(loginRequest.getName(), loginRequest.getPassword());
-        Map<String, String> response = new HashMap<>();
-        response.put("token", token);
-        return ResponseEntity.ok(response);
+    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
+        String token = authService.login(loginRequest);
+        return ResponseEntity.ok(new LoginResponse(token));
     }
 }
