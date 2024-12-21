@@ -1,7 +1,7 @@
-package com.gdgoc.Online_Library.Checkout;
+package com.gdgoc.Online_Library.checkout;
 
-import com.gdgoc.Online_Library.Book.Book;
-import com.gdgoc.Online_Library.User.User;
+import com.gdgoc.Online_Library.book.Book;
+import com.gdgoc.Online_Library.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

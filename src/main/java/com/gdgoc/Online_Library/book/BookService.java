@@ -1,6 +1,6 @@
-package com.gdgoc.Online_Library.Book;
+package com.gdgoc.Online_Library.book;
 
-import com.gdgoc.Online_Library.Book.dto.BookGetResponse;
+import com.gdgoc.Online_Library.book.dto.BookGetResponse;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package com.gdgoc.Online_Library.Book.dto;
+package com.gdgoc.Online_Library.book.dto;
 
-import com.gdgoc.Online_Library.Book.Book;
-import com.gdgoc.Online_Library.Common.Status;
+import com.gdgoc.Online_Library.book.Book;
+import com.gdgoc.Online_Library.common.Status;
 
 public record BookGetResponse(
         String title,
