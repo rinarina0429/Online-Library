@@ -1,6 +1,6 @@
-package com.gdgoc.Online_Library.User;
+package com.gdgoc.Online_Library.book;
 
-import com.gdgoc.Online_Library.Common.Role;
+import com.gdgoc.Online_Library.common.Status;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -17,28 +17,32 @@ import org.hibernate.annotations.ColumnDefault;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User {
+public class Book {
 
     @Id
     @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long bookId;
 
     @Column(nullable = false)
-    private String name;
+    private String title;
 
     @Column(nullable = false)
-    private String password;
+    private String author;
+
+    @Column(nullable = false)
+    private String publisher;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    @ColumnDefault("'USER'")
-    private Role role;
+    @ColumnDefault("'AVAILABLE'")
+    private Status status;
 
     @Builder
-    public User(String name, String password, Role role) {
-        this.name = name;
-        this.password = password;
-        this.role = role;
+    public Book(String title, String author, String publisher, Status status) {
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.status = status;
     }
 }

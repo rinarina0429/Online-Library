@@ -1,4 +1,4 @@
-package com.gdgoc.Online_Library.Book;
+package com.gdgoc.Online_Library.book;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
