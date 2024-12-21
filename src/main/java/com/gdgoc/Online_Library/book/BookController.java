@@ -3,6 +3,7 @@ package com.gdgoc.Online_Library.book;
 import static org.springframework.http.HttpStatus.OK;
 
 import com.gdgoc.Online_Library.book.dto.BookGetResponse;
+import com.gdgoc.Online_Library.book.dto.BooksGetResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
